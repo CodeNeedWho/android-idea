@@ -4,6 +4,6 @@ idea on android,not intellij idea.
 
 ![](https://github.com/CodeNeedWho/android-idea/blob/master/screenshot/1.jpg)
 
-![](./screenshot/2.png)
+![](https://github.com/CodeNeedWho/android-idea/blob/master/screenshot/2.png)
 
-![](./screenshot/3.png)
+![](https://github.com/CodeNeedWho/android-idea/blob/master/screenshot/3.png)
