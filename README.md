@@ -2,7 +2,7 @@
 idea on android,not intellij idea.
 # screenshot
 
-![](./screenshot/1.png)
+![](https://github.com/CodeNeedWho/android-idea/blob/master/screenshot/1.jpg)
 
 ![](./screenshot/2.png)
 
