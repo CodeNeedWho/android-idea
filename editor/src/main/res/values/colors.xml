@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="symbol_press">#999</color>
+    <color name="symbol">#555</color>
+
+    <color name="code_variable">#ffffff</color>
+    <color name="code_modifier">#1C86EE</color>
+    <color name="code_keyword">#5CACEE</color>
+    <color name="code_number">#32CD32</color>
+    <color name="code_string">#F5DEB3</color>
+    <color name="code_symbol">#F2F2F2</color>
+    <color name="code_method">#ffffff</color>
+    <color name="code_comment">#999999</color>
+</resources>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--symbol-->
+    <LinearLayout
+        android:id="@+id/layout_symbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_symbol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <include layout="@layout/edit_symbol" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <!--tool-->
+    <LinearLayout
+        android:id="@+id/layout_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--工具栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff444444"
+            android:orientation="horizontal">
+            <!--函数-->
+            <!--搜索-->
+            <ImageButton
+                android:id="@+id/img_btn_search"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_search" />
+            <!--撤销-->
+            <ImageButton
+                android:id="@+id/img_btn_undo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_undo" />
+            <!--重做-->
+            <ImageButton
+                android:id="@+id/img_btn_redo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_redo" />
+
+            <!--中间：光标悬浮按钮-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <com.jsdroid.editor.widget.SelectTouchView
+                    android:id="@+id/selectTouchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <!--编辑-->
+            <ImageButton
+                android:id="@+id/img_btn_edit"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_edit" />
+            <!--goto-->
+            <ImageButton
+                android:id="@+id/img_btn_goto"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_goto" />
+            <!--newline-->
+            <!--符号-->
+            <ImageButton
+                android:id="@+id/img_btn_symbol"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/selector_symbol" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--search-->
+    <LinearLayout
+        android:id="@+id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!--搜索内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--关闭-->
+            <TextView
+                android:id="@+id/tv_search_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="关闭"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+            <!--搜索内容-->
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_search_bg"
+                android:hint="搜索内容"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="#fff"
+                android:textColorHint="#ccc"
+                android:textSize="12dp" />
+
+            <!--往上-->
+            <TextView
+                android:id="@+id/tv_search_backward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="往上"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+            <!--往下-->
+            <TextView
+                android:id="@+id/tv_search_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="往下"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <!--替换内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--是否正则-->
+            <TextView
+                android:id="@+id/tv_search_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="普通"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+            <!--替换内容-->
+            <EditText
+                android:id="@+id/edit_replace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_search_bg"
+                android:hint="替换内容"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="#fff"
+                android:textColorHint="#ccc"
+                android:textSize="12dp" />
+            <!--一次-->
+            <TextView
+                android:id="@+id/tv_replace_once"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="替换"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+            <!--全部-->
+            <TextView
+                android:id="@+id/tv_replace_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="全部"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--goto-->
+    <LinearLayout
+        android:id="@+id/layout_goto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--关闭-->
+            <TextView
+                android:id="@+id/tv_goto_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="关闭"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+            <!--行数-->
+            <EditText
+                android:id="@+id/edit_goto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_search_bg"
+                android:hint="行数"
+                android:inputType="number"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:textColor="#fff"
+                android:textColorHint="#ccc"
+                android:textSize="12dp" />
+            <!--跳转-->
+            <TextView
+                android:id="@+id/tv_goto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/selector_search_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="跳转"
+                android:textColor="#fff"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--edit-->
+    <LinearLayout
+        android:id="@+id/layout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--关闭-->
+                <TextView
+                    android:id="@+id/tv_edit_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="关闭"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <!--复制-->
+                <TextView
+                    android:id="@+id/tv_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="复制"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <!--复制行-->
+                <TextView
+                    android:id="@+id/tv_copy_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="复制行"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+                <!--复制全部-->
+                <TextView
+                    android:id="@+id/tv_copy_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="复制全部"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+                <!--粘贴-->
+                <TextView
+                    android:id="@+id/tv_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="粘贴"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+                <!--格式化-->
+                <TextView
+                    android:id="@+id/tv_format"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="格式化"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+                <!--删除行-->
+                <TextView
+                    android:id="@+id/tv_delete_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="删除行"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+                <!--清空-->
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/selector_search_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="清空"
+                    android:textColor="#fff"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

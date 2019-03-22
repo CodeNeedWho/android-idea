@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">editor</string>
+    <string name="symbol_quot">\"\"</string>
+    <string name="symbol_and"><![CDATA[&]]></string>
+    <string name="symbol_question_mark">\?</string>
+    <string name="xiaoyu"><![CDATA[<]]></string>
+    <string name="dayu"><![CDATA[>]]></string>
+    <string name="xiegan">\\</string>
+</resources>

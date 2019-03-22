@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_symbol_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="2dp">
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="{}"
+
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="()"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="[]"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/symbol_quot"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="''"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="="
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text=","
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text=";"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="#fff" />
+
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="\@"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="/**/"
+        android:textColor="#fff" />
+
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="*"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="/"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/symbol_and"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="|"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="#"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="!"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/xiaoyu"
+
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/dayu"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/symbol_question_mark"
+
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="_"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="%"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/selector_symbol_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/xiegan"
+        android:textColor="#fff" />
+
+</LinearLayout>

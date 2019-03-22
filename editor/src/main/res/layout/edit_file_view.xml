@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--工具-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--根目录-->
+        <ImageButton
+            android:id="@+id/img_btn_dir"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_dir" />
+
+        <!--操作栏-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!--添加-->
+            <ImageButton
+                android:id="@+id/img_btn_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
+
+            <!--删除-->
+            <ImageButton
+                android:id="@+id/img_btn_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
+
+            <!--复制-->
+            <ImageButton
+                android:id="@+id/img_btn_copy"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
+
+            <!--粘贴-->
+            <ImageButton
+                android:id="@+id/img_btn_paste"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
+
+            <!--全选-->
+            <ImageButton
+                android:id="@+id/img_btn_select_all"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+
+        <!--关闭-->
+        <ImageButton
+            android:id="@+id/img_btn_close"
+            android:background="@drawable/selector_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>

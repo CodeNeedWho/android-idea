@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--top-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/img_btn_dir"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/fm_ic_folder"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="IDEA"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/img_btn_save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_save" />
+
+        <ImageButton
+            android:id="@+id/img_btn_run"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/selector_play"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/img_btn_eye"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/selector_eye"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/img_btn_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/edit_selector_more" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--file tab-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#666" />
+
+            <LinearLayout
+                android:id="@+id/layout_dir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff555555"
+                android:orientation="horizontal">
+                <!--tab-->
+                <com.jsdroid.editor.widget.FileTabView
+                    android:id="@+id/file_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.jsdroid.editor.widget.FileTabView>
+            </LinearLayout>
+            <!--editor-->
+            <com.jsdroid.editor.widget.BgLogoLayout
+                android:id="@+id/layout_editor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg"
+
+                android:orientation="vertical" />
+            <!--tool-->
+            <com.jsdroid.editor.widget.EditToolView
+                android:id="@+id/tool_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/edit_tool_view" />
+            </com.jsdroid.editor.widget.EditToolView>
+        </LinearLayout>
+
+        <!--file-->
+        <com.jsdroid.fileview.FileView
+            android:id="@+id/layout_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@android:color/darker_gray"
+            android:clickable="true"
+            android:orientation="vertical">
+
+        </com.jsdroid.fileview.FileView>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
